@@ -1,0 +1,13 @@
+apply plugin: 'info.solidsoft.pitest'
+
+pitest {
+    junit5PluginVersion = '0.15'
+    threads = 4
+    timestampedReports = false
+    targetClasses = ['com.football.tracker.*']
+    coverageThreshold = 80
+    mutationThreshold = 80
+    excludedClasses = []
+    excludedMethods = []
+    jvmArgs = ['-Xmx1024m']
+}
